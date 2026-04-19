@@ -82,30 +82,30 @@ class PhemexAdapter:
 
     # ── 2. Kline fetchers ────────────────────────────────────────────────────
 
-    async def get_klines_by_time(
-        self,
-        session: aiohttp.ClientSession,
-        symbol: str,
-        interval: str,
-        from_ts_sec: int,
-        to_ts_sec: int,
-    ) -> pd.DataFrame:
-        """Свечи в окне [from_ts_sec, to_ts_sec] — для бэктеста старых листингов."""
-        await self._throttle()
+    # async def get_klines_by_time(
+    #     self,
+    #     session: aiohttp.ClientSession,
+    #     symbol: str,
+    #     interval: str,
+    #     from_ts_sec: int,
+    #     to_ts_sec: int,
+    # ) -> pd.DataFrame:
+    #     """Свечи в окне [from_ts_sec, to_ts_sec] — для бэктеста старых листингов."""
+    #     await self._throttle()
         
-        res_map = {
-            "1m": 60, "5m": 300, "15m": 900, "30m": 1800,
-            "1h": 3600, "4h": 14400, "1d": 86400
-        }
-        resolution = res_map.get(interval, 60)
+    #     res_map = {
+    #         "1m": 60, "5m": 300, "15m": 900, "30m": 1800,
+    #         "1h": 3600, "4h": 14400, "1d": 86400
+    #     }
+    #     resolution = res_map.get(interval, 60)
         
-        params = {
-            "symbol": symbol, 
-            "resolution": int(resolution), 
-            "from": from_ts_sec,
-            "to": to_ts_sec
-        }
-        return await self._fetch_and_parse(session, self.klines_url_hist, params, symbol)
+    #     params = {
+    #         "symbol": symbol, 
+    #         "resolution": int(resolution), 
+    #         "from": from_ts_sec,
+    #         "to": to_ts_sec
+    #     }
+    #     return await self._fetch_and_parse(session, self.klines_url_hist, params, symbol)
 
     async def get_klines_last(
         self,
@@ -136,6 +136,32 @@ class PhemexAdapter:
 
     # ── 3. Internal ──────────────────────────────────────────────────────────
 
+    async def get_klines_by_time(
+        self,
+        session: aiohttp.ClientSession,
+        symbol: str,
+        interval: str,
+        from_ts_sec: int,
+        to_ts_sec: int,
+    ) -> pd.DataFrame:
+        """Свечи в окне [from_ts_sec, to_ts_sec] — для бэктеста старых листингов."""
+        await self._throttle()
+        
+        res_map = {
+            "1m": 60, "5m": 300, "15m": 900, "30m": 1800,
+            "1h": 3600, "4h": 14400, "1d": 86400
+        }
+        resolution = res_map.get(interval, 60)
+        
+        params = {
+            "symbol": symbol, 
+            "resolution": int(resolution), 
+            "from": from_ts_sec,
+            "to": to_ts_sec,
+            "limit": 1000  # Добавил явный лимит, Phemex это любит
+        }
+        return await self._fetch_and_parse(session, self.klines_url_hist, params, symbol)
+
     async def _fetch_and_parse(
         self, session: aiohttp.ClientSession, url: str, params: dict, symbol: str
     ) -> pd.DataFrame:
@@ -144,7 +170,11 @@ class PhemexAdapter:
             async with session.get(url, params=params) as response:
                 if response.status != 200:
                     text = await response.text()
-                    logger.error(f"Failed klines HTTP {response.status}: {text[:100]} [{symbol}]")
+                    # ФИКС 400 ОШИБКИ: Если Phemex ругается 30001, значит истории просто нет
+                    if "30001" in text:
+                        logger.warning(f"[{symbol}] Нет истории (слишком старый листинг или монеты еще не было на Phemex)")
+                    else:
+                        logger.error(f"Failed klines HTTP {response.status}: {text[:100]} [{symbol}]")
                     return pd.DataFrame(columns=['Close'])
 
                 data = await response.json()
@@ -153,7 +183,6 @@ class PhemexAdapter:
             if not rows: 
                 return pd.DataFrame(columns=['Close'])
 
-            # ОПРЕДЕЛЯЕМ МАСШТАБ (SCALE) БЕЗОПАСНО
             inst = self.instruments.get(symbol, {})
             scale = inst.get("_parsed_price_scale", 0)
             
@@ -164,20 +193,61 @@ class PhemexAdapter:
             parsed_data = []
             for r in rows:
                 if len(r) >= 7:
-                    # r[0] - timestamp, r[6] - close (в формате Ep)
                     parsed_data.append([int(r[0]), float(r[6]) / scale])
 
             df = pd.DataFrame(parsed_data, columns=['Time', 'Close'])
             df['Time'] = pd.to_datetime(df['Time'], unit='s', utc=True)
             df.set_index('Time', inplace=True)
             
-            # ФИКС РЕВЕРСА: Сортируем время от прошлого к настоящему!
             df.sort_index(inplace=True)
             return df
 
         except Exception as ex:
             logger.exception(f"{ex} in fetch_and_parse")
             return pd.DataFrame(columns=['Close'])
+
+    # async def _fetch_and_parse(
+    #     self, session: aiohttp.ClientSession, url: str, params: dict, symbol: str
+    # ) -> pd.DataFrame:
+    #     """Единый выстраданный парсер свечей"""
+    #     try:
+    #         async with session.get(url, params=params) as response:
+    #             if response.status != 200:
+    #                 text = await response.text()
+    #                 logger.error(f"Failed klines HTTP {response.status}: {text[:100]} [{symbol}]")
+    #                 return pd.DataFrame(columns=['Close'])
+
+    #             data = await response.json()
+                
+    #         rows = data.get("data", {}).get("rows", [])
+    #         if not rows: 
+    #             return pd.DataFrame(columns=['Close'])
+
+    #         # ОПРЕДЕЛЯЕМ МАСШТАБ (SCALE) БЕЗОПАСНО
+    #         inst = self.instruments.get(symbol, {})
+    #         scale = inst.get("_parsed_price_scale", 0)
+            
+    #         if scale <= 0:
+    #             tick = float(inst.get("tickSize", 0.0001))
+    #             scale = 1.0 / tick if tick > 0 else 10000.0
+
+    #         parsed_data = []
+    #         for r in rows:
+    #             if len(r) >= 7:
+    #                 # r[0] - timestamp, r[6] - close (в формате Ep)
+    #                 parsed_data.append([int(r[0]), float(r[6]) / scale])
+
+    #         df = pd.DataFrame(parsed_data, columns=['Time', 'Close'])
+    #         df['Time'] = pd.to_datetime(df['Time'], unit='s', utc=True)
+    #         df.set_index('Time', inplace=True)
+            
+    #         # ФИКС РЕВЕРСА: Сортируем время от прошлого к настоящему!
+    #         df.sort_index(inplace=True)
+    #         return df
+
+    #     except Exception as ex:
+    #         logger.exception(f"{ex} in fetch_and_parse")
+    #         return pd.DataFrame(columns=['Close'])
 
     async def _throttle(self) -> None:
         """Защита от спама (Rate Limiting)"""

@@ -1,0 +1,828 @@
+[
+    {
+        "symbol": "LAYER",
+        "phemex_symbol": "LAYERUSDT",
+        "announce_ts_ms": 1739316614000,
+        "announce_ts_str": "2025-02-11 23:30:14 UTC",
+        "title": "솔레이어(LAYER) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 및 매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "TRUMP",
+        "phemex_symbol": "TRUMPUSDT",
+        "announce_ts_ms": 1739427846000,
+        "announce_ts_str": "2025-02-13 06:24:06 UTC",
+        "title": "오피셜트럼프(TRUMP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "JTO",
+        "phemex_symbol": "JTOUSDT",
+        "announce_ts_ms": 1740114000000,
+        "announce_ts_str": "2025-02-21 05:00:00 UTC",
+        "title": "지토(JTO) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "ARKM",
+        "phemex_symbol": "ARKMUSDT",
+        "announce_ts_ms": 1740114602000,
+        "announce_ts_str": "2025-02-21 05:10:02 UTC",
+        "title": "아캄(ARKM) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "COW",
+        "phemex_symbol": "COWUSDT",
+        "announce_ts_ms": 1740472795000,
+        "announce_ts_str": "2025-02-25 08:39:55 UTC",
+        "title": "카우프로토콜(COW) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "KAITO",
+        "phemex_symbol": "KAITOUSDT",
+        "announce_ts_ms": 1741142839000,
+        "announce_ts_str": "2025-03-05 02:47:19 UTC",
+        "title": "카이토(KAITO) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ARKM",
+        "phemex_symbol": "ARKMUSDT",
+        "announce_ts_ms": 1741673705000,
+        "announce_ts_str": "2025-03-11 06:15:05 UTC",
+        "title": "아캄(ARKM) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "ORCA",
+        "phemex_symbol": "ORCAUSDT",
+        "announce_ts_ms": 1742533049000,
+        "announce_ts_str": "2025-03-21 04:57:29 UTC",
+        "title": "오르카(ORCA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "WAL",
+        "phemex_symbol": "WALUSDT",
+        "announce_ts_ms": 1743118205000,
+        "announce_ts_str": "2025-03-27 23:30:05 UTC",
+        "title": "월러스(WAL) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 및 매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "COMP",
+        "phemex_symbol": "COMPUSDT",
+        "announce_ts_ms": 1743491100000,
+        "announce_ts_str": "2025-04-01 07:05:00 UTC",
+        "title": "컴파운드(COMP) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "FIL",
+        "phemex_symbol": "FILUSDT",
+        "announce_ts_ms": 1743750282000,
+        "announce_ts_str": "2025-04-04 07:04:42 UTC",
+        "title": "파일코인(FIL) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "WCT",
+        "phemex_symbol": "WCTUSDT",
+        "announce_ts_ms": 1744781950000,
+        "announce_ts_str": "2025-04-16 05:39:10 UTC",
+        "title": "월렛커넥트(WCT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "SHELL",
+        "phemex_symbol": "SHELLUSDT",
+        "announce_ts_ms": 1744783004000,
+        "announce_ts_str": "2025-04-16 05:56:44 UTC",
+        "title": "마이쉘(SHELL), 딥북(DEEP) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "DEEP",
+        "phemex_symbol": "DEEPUSDT",
+        "announce_ts_ms": 1745297912000,
+        "announce_ts_str": "2025-04-22 04:58:32 UTC",
+        "title": "딥북(DEEP) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "SIGN",
+        "phemex_symbol": "SIGNUSDT",
+        "announce_ts_ms": 1745916571000,
+        "announce_ts_str": "2025-04-29 08:49:31 UTC",
+        "title": "사인(SIGN) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 안내)"
+    },
+    {
+        "symbol": "TIA",
+        "phemex_symbol": "TIAUSDT",
+        "announce_ts_ms": 1746696627000,
+        "announce_ts_str": "2025-05-08 09:30:27 UTC",
+        "title": "셀레스티아(TIA)(KRW, BTC, USDT 마켓), 아이오넷(IO)(BTC, USDT 마켓) 신규 거래지원 안내 (주문 타입 제한 관련 안내)"
+    },
+    {
+        "symbol": "PENGU",
+        "phemex_symbol": "PENGUUSDT",
+        "announce_ts_ms": 1746770400000,
+        "announce_ts_str": "2025-05-09 06:00:00 UTC",
+        "title": "펏지펭귄(PENGU) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "NXPC",
+        "phemex_symbol": "NXPCUSDT",
+        "announce_ts_ms": 1747301104000,
+        "announce_ts_str": "2025-05-15 09:25:04 UTC",
+        "title": "넥스페이스(NXPC) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 변경 안내)"
+    },
+    {
+        "symbol": "OM",
+        "phemex_symbol": "OMUSDT",
+        "announce_ts_ms": 1747795529000,
+        "announce_ts_str": "2025-05-21 02:45:29 UTC",
+        "title": "만트라(OM) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ACS",
+        "phemex_symbol": "ACSUSDT",
+        "announce_ts_ms": 1747795536000,
+        "announce_ts_str": "2025-05-21 02:45:36 UTC",
+        "title": "엑세스프로토콜(ACS), 고체인(GO), 옵저버(OBSR), 퀴즈톡(QTCON), 랠리(RLY) USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "KERNEL",
+        "phemex_symbol": "KERNELUSDT",
+        "announce_ts_ms": 1747974617000,
+        "announce_ts_str": "2025-05-23 04:30:17 UTC",
+        "title": "커널다오(KERNEL) 신규 거래지원 안내 (BTC, USDT 마켓) (업비트 ATH 이벤트 안내)"
+    },
+    {
+        "symbol": "SOON",
+        "phemex_symbol": "SOONUSDT",
+        "announce_ts_ms": 1747996800000,
+        "announce_ts_str": "2025-05-23 10:40:00 UTC",
+        "title": "쑨(SOON) 신규 거래지원 안내 (BTC, USDT 마켓) (거래지원 개시 시점 및 매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "HYPER",
+        "phemex_symbol": "HYPERUSDT",
+        "announce_ts_ms": 1748331890000,
+        "announce_ts_str": "2025-05-27 07:44:50 UTC",
+        "title": "하이퍼레인(HYPER), 레드스톤(RED) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "SOPH",
+        "phemex_symbol": "SOPHUSDT",
+        "announce_ts_ms": 1748436005000,
+        "announce_ts_str": "2025-05-28 12:40:05 UTC",
+        "title": "소폰(SOPH) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 및 매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "FLOCK",
+        "phemex_symbol": "FLOCKUSDT",
+        "announce_ts_ms": 1748574377000,
+        "announce_ts_str": "2025-05-30 03:06:17 UTC",
+        "title": "플록(FLOCK), 포르타(FORT) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "LPT",
+        "phemex_symbol": "LPTUSDT",
+        "announce_ts_ms": 1748574900000,
+        "announce_ts_str": "2025-05-30 03:15:00 UTC",
+        "title": "라이브피어(LPT)(KRW, USDT 마켓), 포켓네트워크(POKT)(KRW 마켓) 디지털 자산 추가"
+    },
+    {
+        "symbol": "RVN",
+        "phemex_symbol": "RVNUSDT",
+        "announce_ts_ms": 1749107001000,
+        "announce_ts_str": "2025-06-05 07:03:21 UTC",
+        "title": "레이븐코인(RVN) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "LA",
+        "phemex_symbol": "LAUSDT",
+        "announce_ts_ms": 1749168000000,
+        "announce_ts_str": "2025-06-06 00:00:00 UTC",
+        "title": "라그랑주(LA) 신규 거래지원 안내 (BTC, USDT 마켓) (거래지원 개시 시점 안내)"
+    },
+    {
+        "symbol": "AXL",
+        "phemex_symbol": "AXLUSDT",
+        "announce_ts_ms": 1749530472000,
+        "announce_ts_str": "2025-06-10 04:41:12 UTC",
+        "title": "엑셀라(AXL) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "EPT",
+        "phemex_symbol": "EPTUSDT",
+        "announce_ts_ms": 1749545400000,
+        "announce_ts_str": "2025-06-10 08:50:00 UTC",
+        "title": "밸런스(EPT) 신규 거래지원 안내 (USDT 마켓) (거래지원 개시 시점 연기 안내)"
+    },
+    {
+        "symbol": "ALT",
+        "phemex_symbol": "ALTUSDT",
+        "announce_ts_ms": 1750064685000,
+        "announce_ts_str": "2025-06-16 09:04:45 UTC",
+        "title": "알트레이어(ALT) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "HAEDAL",
+        "phemex_symbol": "HAEDALUSDT",
+        "announce_ts_ms": 1750074601000,
+        "announce_ts_str": "2025-06-16 11:50:01 UTC",
+        "title": "해달프로토콜(HAEDAL) 신규 거래지원 안내 (BTC, USDT 마켓) (거래지원 개시 시점 연기 안내)"
+    },
+    {
+        "symbol": "RAY",
+        "phemex_symbol": "RAYUSDT",
+        "announce_ts_ms": 1750293303000,
+        "announce_ts_str": "2025-06-19 00:35:03 UTC",
+        "title": "레이디움(RAY) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "NEWT",
+        "phemex_symbol": "NEWTUSDT",
+        "announce_ts_ms": 1750776344000,
+        "announce_ts_str": "2025-06-24 14:45:44 UTC",
+        "title": "뉴턴프로토콜(NEWT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "SAHARA",
+        "phemex_symbol": "SAHARAUSDT",
+        "announce_ts_ms": 1750942216000,
+        "announce_ts_str": "2025-06-26 12:50:16 UTC",
+        "title": "사하라에이아이(SAHARA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 변경 안내)"
+    },
+    {
+        "symbol": "MOODENG",
+        "phemex_symbol": "MOODENGUSDT",
+        "announce_ts_ms": 1751518021000,
+        "announce_ts_str": "2025-07-03 04:47:01 UTC",
+        "title": "무뎅(MOODENG) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "BABY",
+        "phemex_symbol": "BABYUSDT",
+        "announce_ts_ms": 1752118200000,
+        "announce_ts_str": "2025-07-10 03:30:00 UTC",
+        "title": "바빌론(BABY) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "HYPER",
+        "phemex_symbol": "HYPERUSDT",
+        "announce_ts_ms": 1752118201000,
+        "announce_ts_str": "2025-07-10 03:30:01 UTC",
+        "title": "하이퍼레인(HYPER) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "ENA",
+        "phemex_symbol": "ENAUSDT",
+        "announce_ts_ms": 1752208979000,
+        "announce_ts_str": "2025-07-11 04:42:59 UTC",
+        "title": "에테나(ENA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ERA",
+        "phemex_symbol": "ERAUSDT",
+        "announce_ts_ms": 1752767821000,
+        "announce_ts_str": "2025-07-17 15:57:01 UTC",
+        "title": "칼데라(ERA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "SYRUP",
+        "phemex_symbol": "SYRUPUSDT",
+        "announce_ts_ms": 1753409990000,
+        "announce_ts_str": "2025-07-25 02:19:50 UTC",
+        "title": "메이플파이낸스(SYRUP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "HUMA",
+        "phemex_symbol": "HUMAUSDT",
+        "announce_ts_ms": 1753409991000,
+        "announce_ts_str": "2025-07-25 02:19:51 UTC",
+        "title": "후마파이낸스(HUMA) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "OP",
+        "phemex_symbol": "OPUSDT",
+        "announce_ts_ms": 1753676665000,
+        "announce_ts_str": "2025-07-28 04:24:25 UTC",
+        "title": "옵티미즘(OP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "OMNI",
+        "phemex_symbol": "OMNIUSDT",
+        "announce_ts_ms": 1753779000000,
+        "announce_ts_str": "2025-07-29 08:50:00 UTC",
+        "title": "옴니네트워크(OMNI) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "PROVE",
+        "phemex_symbol": "PROVEUSDT",
+        "announce_ts_ms": 1754456042000,
+        "announce_ts_str": "2025-08-06 04:54:02 UTC",
+        "title": "서싱트(PROVE) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 변경 안내)"
+    },
+    {
+        "symbol": "IP",
+        "phemex_symbol": "IPUSDT",
+        "announce_ts_ms": 1754618979000,
+        "announce_ts_str": "2025-08-08 02:09:39 UTC",
+        "title": "스토리(IP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "CYBER",
+        "phemex_symbol": "CYBERUSDT",
+        "announce_ts_ms": 1754983800000,
+        "announce_ts_str": "2025-08-12 07:30:00 UTC",
+        "title": "사이버(CYBER) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "API3",
+        "phemex_symbol": "API3USDT",
+        "announce_ts_ms": 1755588600000,
+        "announce_ts_str": "2025-08-19 07:30:00 UTC",
+        "title": "에이피아이쓰리(API3) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "AERO",
+        "phemex_symbol": "AEROUSDT",
+        "announce_ts_ms": 1755822600000,
+        "announce_ts_str": "2025-08-22 00:30:00 UTC",
+        "title": "에어로드롬파이낸스(AERO) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "TREE",
+        "phemex_symbol": "TREEUSDT",
+        "announce_ts_ms": 1756357200000,
+        "announce_ts_str": "2025-08-28 05:00:00 UTC",
+        "title": "트리하우스(TREE) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "USD1",
+        "phemex_symbol": "USD1USDT",
+        "announce_ts_ms": 1756699751000,
+        "announce_ts_str": "2025-09-01 04:09:11 UTC",
+        "title": "월드리버티파이낸셜유에스디(USD1) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "WLFI",
+        "phemex_symbol": "WLFIUSDT",
+        "announce_ts_ms": 1756731006000,
+        "announce_ts_str": "2025-09-01 12:50:06 UTC",
+        "title": "월드리버티파이낸셜(WLFI) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "RED",
+        "phemex_symbol": "REDUSDT",
+        "announce_ts_ms": 1757058300000,
+        "announce_ts_str": "2025-09-05 07:45:00 UTC",
+        "title": "레드스톤(RED) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "FLOCK",
+        "phemex_symbol": "FLOCKUSDT",
+        "announce_ts_ms": 1757385600000,
+        "announce_ts_str": "2025-09-09 02:40:00 UTC",
+        "title": "플록(FLOCK) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "WLD",
+        "phemex_symbol": "WLDUSDT",
+        "announce_ts_ms": 1757413269000,
+        "announce_ts_str": "2025-09-09 10:21:09 UTC",
+        "title": "월드코인(WLD) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "OPEN",
+        "phemex_symbol": "OPENUSDT",
+        "announce_ts_ms": 1757478156000,
+        "announce_ts_str": "2025-09-10 04:22:36 UTC",
+        "title": "오픈렛저(OPEN) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "LINEA",
+        "phemex_symbol": "LINEAUSDT",
+        "announce_ts_ms": 1757521530000,
+        "announce_ts_str": "2025-09-10 16:25:30 UTC",
+        "title": "리네아(LINEA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "HOLO",
+        "phemex_symbol": "HOLOUSDT",
+        "announce_ts_ms": 1757591700000,
+        "announce_ts_str": "2025-09-11 11:55:00 UTC",
+        "title": "홀로월드에이아이(HOLO) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "PUMP",
+        "phemex_symbol": "PUMPUSDT",
+        "announce_ts_ms": 1757592901000,
+        "announce_ts_str": "2025-09-11 12:15:01 UTC",
+        "title": "펌프펀(PUMP) 신규 거래지원 안내 (KRW, USDT 마켓) (거래지원 개시 시점 변경 안내)"
+    },
+    {
+        "symbol": "AVNT",
+        "phemex_symbol": "AVNTUSDT",
+        "announce_ts_ms": 1757909461000,
+        "announce_ts_str": "2025-09-15 04:11:01 UTC",
+        "title": "아반티스(AVNT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 변경 안내)"
+    },
+    {
+        "symbol": "ZKC",
+        "phemex_symbol": "ZKCUSDT",
+        "announce_ts_ms": 1757944511000,
+        "announce_ts_str": "2025-09-15 13:55:11 UTC",
+        "title": "바운드리스(ZKC) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "TOSHI",
+        "phemex_symbol": "TOSHIUSDT",
+        "announce_ts_ms": 1758076222000,
+        "announce_ts_str": "2025-09-17 02:30:22 UTC",
+        "title": "토시(TOSHI) 신규 거래지원 안내 (KRW, USDT 마켓)"
+    },
+    {
+        "symbol": "EUL",
+        "phemex_symbol": "EULUSDT",
+        "announce_ts_ms": 1758076223000,
+        "announce_ts_str": "2025-09-17 02:30:23 UTC",
+        "title": "오일러(EUL), 플룸(PLUME) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "LA",
+        "phemex_symbol": "LAUSDT",
+        "announce_ts_ms": 1758189751000,
+        "announce_ts_str": "2025-09-18 10:02:31 UTC",
+        "title": "라그랑주(LA) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "BARD",
+        "phemex_symbol": "BARDUSDT",
+        "announce_ts_ms": 1758202249000,
+        "announce_ts_str": "2025-09-18 13:30:49 UTC",
+        "title": "롬바드(BARD) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (유통량 계획표 수정 안내)"
+    },
+    {
+        "symbol": "ETHFI",
+        "phemex_symbol": "ETHFIUSDT",
+        "announce_ts_ms": 1758251400000,
+        "announce_ts_str": "2025-09-19 03:10:00 UTC",
+        "title": "이더파이(ETHFI), 리졸브(RESOLV), 이니시아(INIT), 스파크(SPK) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "SUN",
+        "phemex_symbol": "SUNUSDT",
+        "announce_ts_ms": 1758508200000,
+        "announce_ts_str": "2025-09-22 02:30:00 UTC",
+        "title": "썬(SUN) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "0G",
+        "phemex_symbol": "0GUSDT",
+        "announce_ts_ms": 1758538802000,
+        "announce_ts_str": "2025-09-22 11:00:02 UTC",
+        "title": "제로지(0G) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 및 매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "FLUID",
+        "phemex_symbol": "FLUIDUSDT",
+        "announce_ts_ms": 1758701400000,
+        "announce_ts_str": "2025-09-24 08:10:00 UTC",
+        "title": "플루이드(FLUID) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "IN",
+        "phemex_symbol": "INUSDT",
+        "announce_ts_ms": 1758701401000,
+        "announce_ts_str": "2025-09-24 08:10:01 UTC",
+        "title": "인피닛(IN) BTC, USDT 마켓, 비쓰리(B3) USDT 마켓 신규 거래지원 안내"
+    },
+    {
+        "symbol": "XPL",
+        "phemex_symbol": "XPLUSDT",
+        "announce_ts_ms": 1758804900000,
+        "announce_ts_str": "2025-09-25 12:55:00 UTC",
+        "title": "플라즈마(XPL) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "MIRA",
+        "phemex_symbol": "MIRAUSDT",
+        "announce_ts_ms": 1758891300000,
+        "announce_ts_str": "2025-09-26 12:55:00 UTC",
+        "title": "미라네트워크(MIRA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "SUPER",
+        "phemex_symbol": "SUPERUSDT",
+        "announce_ts_ms": 1759136031000,
+        "announce_ts_str": "2025-09-29 08:53:51 UTC",
+        "title": "슈퍼버스(SUPER) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ORDER",
+        "phemex_symbol": "ORDERUSDT",
+        "announce_ts_ms": 1759136043000,
+        "announce_ts_str": "2025-09-29 08:54:03 UTC",
+        "title": "오덜리(ORDER) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "FF",
+        "phemex_symbol": "FFUSDT",
+        "announce_ts_ms": 1759150522000,
+        "announce_ts_str": "2025-09-29 12:55:22 UTC",
+        "title": "팔콘파이낸스(FF) 신규 거래지원 안내 (KRW, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "SOMI",
+        "phemex_symbol": "SOMIUSDT",
+        "announce_ts_ms": 1759299302000,
+        "announce_ts_str": "2025-10-01 06:15:02 UTC",
+        "title": "솜니아(SOMI) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (거래지원 개시 시점 변경 안내)"
+    },
+    {
+        "symbol": "2Z",
+        "phemex_symbol": "2ZUSDT",
+        "announce_ts_ms": 1759409706000,
+        "announce_ts_str": "2025-10-02 12:55:06 UTC",
+        "title": "더블제로(2Z) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "DOOD",
+        "phemex_symbol": "DOODUSDT",
+        "announce_ts_ms": 1759811700000,
+        "announce_ts_str": "2025-10-07 04:35:00 UTC",
+        "title": "두들즈(DOOD) 신규 거래지원 안내 (KRW, USDT 마켓)"
+    },
+    {
+        "symbol": "IN",
+        "phemex_symbol": "INUSDT",
+        "announce_ts_ms": 1760076000000,
+        "announce_ts_str": "2025-10-10 06:00:00 UTC",
+        "title": "인피닛(IN) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "YGG",
+        "phemex_symbol": "YGGUSDT",
+        "announce_ts_ms": 1760504400000,
+        "announce_ts_str": "2025-10-15 05:00:00 UTC",
+        "title": "일드길드게임즈(YGG) KRW, USDT 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "ZORA",
+        "phemex_symbol": "ZORAUSDT",
+        "announce_ts_ms": 1760668200000,
+        "announce_ts_str": "2025-10-17 02:30:00 UTC",
+        "title": "조라(ZORA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ZBT",
+        "phemex_symbol": "ZBTUSDT",
+        "announce_ts_ms": 1760705700000,
+        "announce_ts_str": "2025-10-17 12:55:00 UTC",
+        "title": "제로베이스(ZBT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "BIO",
+        "phemex_symbol": "BIOUSDT",
+        "announce_ts_ms": 1760942100000,
+        "announce_ts_str": "2025-10-20 06:35:00 UTC",
+        "title": "바이오프로토콜(BIO) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "F",
+        "phemex_symbol": "FUSDT",
+        "announce_ts_ms": 1761023400000,
+        "announce_ts_str": "2025-10-21 05:10:00 UTC",
+        "title": "신퓨처스(F) 신규 거래지원 안내 (KRW, USDT 마켓)"
+    },
+    {
+        "symbol": "CPOOL",
+        "phemex_symbol": "CPOOLUSDT",
+        "announce_ts_ms": 1761110400000,
+        "announce_ts_str": "2025-10-22 05:20:00 UTC",
+        "title": "클리어풀(CPOOL) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ORDER",
+        "phemex_symbol": "ORDERUSDT",
+        "announce_ts_ms": 1761286500000,
+        "announce_ts_str": "2025-10-24 06:15:00 UTC",
+        "title": "오덜리(ORDER) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "KERNEL",
+        "phemex_symbol": "KERNELUSDT",
+        "announce_ts_ms": 1761634800000,
+        "announce_ts_str": "2025-10-28 07:00:00 UTC",
+        "title": "커널다오(KERNEL) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "ENSO",
+        "phemex_symbol": "ENSOUSDT",
+        "announce_ts_ms": 1761719456000,
+        "announce_ts_str": "2025-10-29 06:30:56 UTC",
+        "title": "엔소(ENSO) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "KITE",
+        "phemex_symbol": "KITEUSDT",
+        "announce_ts_ms": 1762175650000,
+        "announce_ts_str": "2025-11-03 13:14:10 UTC",
+        "title": "카이트(KITE) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "MMT",
+        "phemex_symbol": "MMTUSDT",
+        "announce_ts_ms": 1762259106000,
+        "announce_ts_str": "2025-11-04 12:25:06 UTC",
+        "title": "모멘텀(MMT) 신규 거래지원 안내 (BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "MMT",
+        "phemex_symbol": "MMTUSDT",
+        "announce_ts_ms": 1762321679000,
+        "announce_ts_str": "2025-11-05 05:47:59 UTC",
+        "title": "모멘텀(MMT) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "TRUST",
+        "phemex_symbol": "TRUSTUSDT",
+        "announce_ts_ms": 1762340105000,
+        "announce_ts_str": "2025-11-05 10:55:05 UTC",
+        "title": "인튜이션(TRUST) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "MET2",
+        "phemex_symbol": "MET2USDT",
+        "announce_ts_ms": 1763446800000,
+        "announce_ts_str": "2025-11-18 06:20:00 UTC",
+        "title": "메테오라(MET2) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "MON",
+        "phemex_symbol": "MONUSDT",
+        "announce_ts_ms": 1763995800000,
+        "announce_ts_str": "2025-11-24 14:50:00 UTC",
+        "title": "모나드(MON) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (매도 최저가 기준 가격 안내)"
+    },
+    {
+        "symbol": "PLUME",
+        "phemex_symbol": "PLUMEUSDT",
+        "announce_ts_ms": 1764135002000,
+        "announce_ts_str": "2025-11-26 05:30:02 UTC",
+        "title": "플룸(PLUME) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "WET",
+        "phemex_symbol": "WETUSDT",
+        "announce_ts_ms": 1765790984000,
+        "announce_ts_str": "2025-12-15 09:29:44 UTC",
+        "title": "휴미디파이(WET) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (추가 안내)"
+    },
+    {
+        "symbol": "YB",
+        "phemex_symbol": "YBUSDT",
+        "announce_ts_ms": 1766722500000,
+        "announce_ts_str": "2025-12-26 04:15:00 UTC",
+        "title": "일드베이시스(YB) 신규 거래지원 안내 (BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ZKP",
+        "phemex_symbol": "ZKPUSDT",
+        "announce_ts_ms": 1766729983000,
+        "announce_ts_str": "2025-12-26 06:19:43 UTC",
+        "title": "지케이패스(ZKP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "XAUT",
+        "phemex_symbol": "XAUTUSDT",
+        "announce_ts_ms": 1767240000000,
+        "announce_ts_str": "2026-01-01 04:00:00 UTC",
+        "title": "테더골드(XAUT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ZK",
+        "phemex_symbol": "ZKUSDT",
+        "announce_ts_ms": 1767684615000,
+        "announce_ts_str": "2026-01-06 07:30:15 UTC",
+        "title": "지케이싱크(ZK) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "BREV",
+        "phemex_symbol": "BREVUSDT",
+        "announce_ts_ms": 1767752401000,
+        "announce_ts_str": "2026-01-07 02:20:01 UTC",
+        "title": "브레비스(BREV) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "USDE",
+        "phemex_symbol": "USDEUSDT",
+        "announce_ts_ms": 1768373747000,
+        "announce_ts_str": "2026-01-14 06:55:47 UTC",
+        "title": "유에스디이(USDE) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ELSA",
+        "phemex_symbol": "ELSAUSDT",
+        "announce_ts_ms": 1769059800000,
+        "announce_ts_str": "2026-01-22 05:30:00 UTC",
+        "title": "헤이엘사(ELSA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "SENT",
+        "phemex_symbol": "SENTUSDT",
+        "announce_ts_ms": 1769667307000,
+        "announce_ts_str": "2026-01-29 06:15:07 UTC",
+        "title": "센티언트(SENT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "BIRB",
+        "phemex_symbol": "BIRBUSDT",
+        "announce_ts_ms": 1770102000000,
+        "announce_ts_str": "2026-02-03 07:00:00 UTC",
+        "title": "문버드(BIRB) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "TAO",
+        "phemex_symbol": "TAOUSDT",
+        "announce_ts_ms": 1771218000000,
+        "announce_ts_str": "2026-02-16 05:00:00 UTC",
+        "title": "비트텐서(TAO) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "AZTEC",
+        "phemex_symbol": "AZTECUSDT",
+        "announce_ts_ms": 1771563600000,
+        "announce_ts_str": "2026-02-20 05:00:00 UTC",
+        "title": "아즈텍(AZTEC) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "SKR",
+        "phemex_symbol": "SKRUSDT",
+        "announce_ts_ms": 1771909200000,
+        "announce_ts_str": "2026-02-24 05:00:00 UTC",
+        "title": "시커(SKR) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ESP",
+        "phemex_symbol": "ESPUSDT",
+        "announce_ts_ms": 1771913044000,
+        "announce_ts_str": "2026-02-24 06:04:04 UTC",
+        "title": "에스프레소(ESP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "CFG",
+        "phemex_symbol": "CFGUSDT",
+        "announce_ts_ms": 1772074800000,
+        "announce_ts_str": "2026-02-26 03:00:00 UTC",
+        "title": "센트리퓨즈(CFG) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "EDGE",
+        "phemex_symbol": "EDGEUSDT",
+        "announce_ts_ms": 1772603400000,
+        "announce_ts_str": "2026-03-04 05:50:00 UTC",
+        "title": "디피니티브(EDGE) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ICP",
+        "phemex_symbol": "ICPUSDT",
+        "announce_ts_ms": 1773208800000,
+        "announce_ts_str": "2026-03-11 06:00:00 UTC",
+        "title": "인터넷컴퓨터(ICP) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "ETHFI",
+        "phemex_symbol": "ETHFIUSDT",
+        "announce_ts_ms": 1773888600000,
+        "announce_ts_str": "2026-03-19 02:50:00 UTC",
+        "title": "이더파이(ETHFI) KRW 마켓 디지털 자산 추가"
+    },
+    {
+        "symbol": "KAT",
+        "phemex_symbol": "KATUSDT",
+        "announce_ts_ms": 1774517102000,
+        "announce_ts_str": "2026-03-26 09:25:02 UTC",
+        "title": "카타나(KAT) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (명칭 변경 안내)"
+    },
+    {
+        "symbol": "SKY",
+        "phemex_symbol": "SKYUSDT",
+        "announce_ts_ms": 1774926029000,
+        "announce_ts_str": "2026-03-31 03:00:29 UTC",
+        "title": "스카이프로토콜(SKY), 유에스디에스(USDS) KRW, USDT 마켓 디지털 자산 추가 (USDS 거래지원 개시 시점 변경 안내)"
+    },
+    {
+        "symbol": "ZAMA",
+        "phemex_symbol": "ZAMAUSDT",
+        "announce_ts_ms": 1776152920000,
+        "announce_ts_str": "2026-04-14 07:48:40 UTC",
+        "title": "자마(ZAMA) 신규 거래지원 안내 (KRW, BTC, USDT 마켓)"
+    },
+    {
+        "symbol": "CC",
+        "phemex_symbol": "CCUSDT",
+        "announce_ts_ms": 1776229203000,
+        "announce_ts_str": "2026-04-15 05:00:03 UTC",
+        "title": "캔톤(CC) 신규 거래지원 안내 (KRW, BTC, USDT 마켓) (입출금 서비스 개시 안내 및 거래지원 개시 시점 안내)"
+    },
+    {
+        "symbol": "SOON",
+        "phemex_symbol": "SOONUSDT",
+        "announce_ts_ms": 1776402002000,
+        "announce_ts_str": "2026-04-17 05:00:02 UTC",
+        "title": "쑨(SOON) KRW 마켓 디지털 자산 추가"
+    }
+]

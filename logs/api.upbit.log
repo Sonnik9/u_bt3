@@ -62,3 +62,20 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-04-20 02:11:29  api.upbit             ERROR     Upbit API error 429 on page 11
 2026-04-20 02:11:29  api.upbit             INFO      Total listing announcements collected: 129
 2026-04-20 02:11:29  api.upbit             INFO      Upbit parser: 129 уникальных листинг-событий
+2026-04-20 02:26:44  api.upbit             INFO      Upbit: локальный кеш пуст или отсутствует. Начинаем парсинг API...
+2026-04-20 02:26:45  api.upbit             INFO      Page 1: processed 20 notices, found 8 listings so far
+2026-04-20 02:26:46  api.upbit             INFO      Page 2: processed 20 notices, found 15 listings so far
+2026-04-20 02:26:55  api.upbit             INFO      Upbit: локальный кеш пуст или отсутствует. Начинаем парсинг API...
+2026-04-20 02:26:57  api.upbit             INFO      Page 1: processed 20 notices, found 8 listings so far
+2026-04-20 02:26:57  api.upbit             INFO      Page 2: processed 20 notices, found 15 listings so far
+2026-04-20 02:26:58  api.upbit             INFO      Page 3: processed 20 notices, found 26 listings so far
+2026-04-20 02:26:59  api.upbit             INFO      Page 4: processed 20 notices, found 42 listings so far
+2026-04-20 02:27:00  api.upbit             INFO      Page 5: processed 20 notices, found 61 listings so far
+2026-04-20 02:27:01  api.upbit             INFO      Page 6: processed 20 notices, found 78 listings so far
+2026-04-20 02:27:01  api.upbit             INFO      Page 7: processed 20 notices, found 92 listings so far
+2026-04-20 02:27:02  api.upbit             INFO      Page 8: processed 20 notices, found 105 listings so far
+2026-04-20 02:27:03  api.upbit             INFO      Page 9: processed 20 notices, found 118 listings so far
+2026-04-20 02:27:03  api.upbit             ERROR     Upbit API error 429 on page 10
+2026-04-20 02:27:03  api.upbit             INFO      Total listing announcements collected: 118
+2026-04-20 02:27:03  api.upbit             INFO      Upbit parser: 118 уникальных листинг-событий
+2026-04-20 02:27:03  api.upbit             INFO      Upbit: 118 анонсов успешно сохранены в кеш 'upbit_cache.json'

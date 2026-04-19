@@ -76,28 +76,29 @@ class UpbitParser:
         page = 1
 
         while page <= self._cfg.max_pages:
+            # Строго как в u_bt2
             params = {
                 "category": "trade",
                 "page": page,
-                "per_page": self._cfg.per_page,
-                "os": "web",
+                "per_page": self._cfg.per_page,  # Здесь теперь будет строго 20
+                "os": "web"
             }
             try:
-                async with session.get(
-                    self._cfg.notice_url, params=params
-                ) as resp:
+                async with session.get(self._cfg.notice_url, params=params) as resp:
                     if resp.status != 200:
                         logger.error(f"Upbit API error {resp.status} on page {page}")
                         break
                     data = await resp.json()
 
-                notices: list[dict] = data.get("data", {}).get("notices", [])
+                notices = data.get("data", {}).get("notices", [])
                 if not notices:
                     logger.info(f"No more notices on page {page}")
                     break
 
                 for notice in notices:
-                    title: str = notice.get("title", "")
+                    title = notice.get("title", "")
+                    
+                    # Проверка по ключевым словам как в u_bt2
                     if not any(kw in title for kw in self._cfg.listing_keywords):
                         continue
 
@@ -106,7 +107,7 @@ class UpbitParser:
                         logger.warning(f"Could not extract symbol from: {title!r}")
                         continue
 
-                    listed_at: str = notice.get("listed_at", "")
+                    listed_at = notice.get("listed_at")
                     if not listed_at:
                         logger.warning(f"No listed_at for {symbol!r}")
                         continue
@@ -138,6 +139,7 @@ class UpbitParser:
 
         logger.info(f"Total listing announcements collected: {len(listings)}")
 
+        # Дальше идет твоя логика дедупликации
         seen: set[tuple[str, int]] = set()
         events: list[ListingEvent] = []
         for item in listings:

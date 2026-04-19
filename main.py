@@ -41,7 +41,7 @@ logger = get_logger("main")
 def build_config() -> AppConfig:
     return AppConfig(
         upbit=UpbitConfig(
-            per_page=100,
+            # УБИРАЕМ per_page=100, так как Upbit отдает 400 ошибку при значениях > 20
             max_pages=20,
             request_delay_sec=0.4,
         ),
@@ -52,8 +52,8 @@ def build_config() -> AppConfig:
             klines_limit=100,
         ),
         backtest=BacktestConfig(
-            delta_minutes=15,       # T+N мин для Δ цены
-            min_delta_pct=3.0,      # порог |Δ%|
+            delta_minutes=15,
+            min_delta_pct=3.0,
             trend_enabled=True,
             trend_fast_ema=10,
             trend_slow_ema=30,

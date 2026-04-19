@@ -16,7 +16,7 @@ TF_MINUTES: dict[str, int] = {
 PHEMEX_ALLOWED_LIMITS: list[int] = [5, 10, 50, 100, 500, 1000]
 
 # ── Upbit notice API ────────────────────────────────────────────────────────
-UPBIT_NOTICE_URL: str = "https://upbit.com/api/v1/notices"
+UPBIT_NOTICE_URL: str = "https://api-manager.upbit.com/api/v1/announcements"
 
 # Ключевые слова листинга на корейском (проверяется по title)
 UPBIT_LISTING_KEYWORDS: list[str] = [

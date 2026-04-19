@@ -33,3 +33,19 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2026-04-20 01:43:15  api.upbit             ERROR     Upbit API error 400 on page 1
 2026-04-20 01:43:15  api.upbit             INFO      Total listing announcements collected: 0
 2026-04-20 01:43:15  api.upbit             INFO      Upbit parser: 0 уникальных листинг-событий
+2026-04-20 01:54:04  api.upbit             ERROR     Upbit API error 400 on page 1
+2026-04-20 01:54:04  api.upbit             INFO      Total listing announcements collected: 0
+2026-04-20 01:54:04  api.upbit             INFO      Upbit parser: 0 уникальных листинг-событий
+2026-04-20 02:03:45  api.upbit             INFO      Page 1: processed 20 notices, found 8 listings so far
+2026-04-20 02:03:46  api.upbit             INFO      Page 2: processed 20 notices, found 15 listings so far
+2026-04-20 02:03:47  api.upbit             INFO      Page 3: processed 20 notices, found 26 listings so far
+2026-04-20 02:03:48  api.upbit             INFO      Page 4: processed 20 notices, found 42 listings so far
+2026-04-20 02:03:49  api.upbit             INFO      Page 5: processed 20 notices, found 61 listings so far
+2026-04-20 02:03:49  api.upbit             INFO      Page 6: processed 20 notices, found 78 listings so far
+2026-04-20 02:03:50  api.upbit             INFO      Page 7: processed 20 notices, found 92 listings so far
+2026-04-20 02:03:51  api.upbit             INFO      Page 8: processed 20 notices, found 105 listings so far
+2026-04-20 02:03:52  api.upbit             INFO      Page 9: processed 20 notices, found 118 listings so far
+2026-04-20 02:03:53  api.upbit             INFO      Page 10: processed 20 notices, found 129 listings so far
+2026-04-20 02:03:53  api.upbit             ERROR     Upbit API error 429 on page 11
+2026-04-20 02:03:53  api.upbit             INFO      Total listing announcements collected: 129
+2026-04-20 02:03:53  api.upbit             INFO      Upbit parser: 129 уникальных листинг-событий

@@ -85,7 +85,9 @@ class BacktestEngine:
 
             # ── 2. Upbit listings ─────────────────────────────────────────
             logger.info("━ [2/6] Парсим историю листингов Upbit …")
-            events = await self._upbit.fetch_listings(session)
+            # events = await self._upbit.fetch_listings(session)
+            # Если хочешь, можешь положить кеш в папку data/ или оставить в корне
+            events = await self._upbit.get_cached_listings(session, cache_file="upbit_cache.json")
             if not events:
                 logger.warning("Upbit вернул 0 листинговых событий")
                 return []

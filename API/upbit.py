@@ -22,6 +22,9 @@ from _math import ListingEvent
 from c_log import get_logger
 from config import UpbitConfig
 
+import json
+import os
+
 logger = get_logger("api.upbit")
 
 
@@ -156,4 +159,50 @@ class UpbitParser:
 
         events.sort(key=lambda e: e.announce_ts_ms)
         logger.info(f"Upbit parser: {len(events)} уникальных листинг-событий")
+        return events    
+        
+    async def get_cached_listings(
+        self, 
+        session: aiohttp.ClientSession, 
+        cache_file: str = "upbit_cache.json"
+    ) -> list[ListingEvent]:
+        """
+        Проверяет наличие локального кеша. Если он есть и не пуст — отдает данные оттуда.
+        В противном случае делает запрос к API и сохраняет результат в JSON.
+        """
+        # 1. Пытаемся прочитать кеш
+        if os.path.exists(cache_file):
+            try:
+                with open(cache_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                
+                if data and isinstance(data, list) and len(data) > 0:
+                    logger.info(f"Upbit: загружено {len(data)} анонсов из локального кеша '{cache_file}'")
+                    # Восстанавливаем список объектов ListingEvent
+                    return [ListingEvent(**item) for item in data]
+            except Exception as e:
+                logger.warning(f"Ошибка чтения кеша {cache_file}: {e}. Будем парсить API заново...")
+
+        # 2. Если кеша нет или он битый — парсим через API
+        logger.info("Upbit: локальный кеш пуст или отсутствует. Начинаем парсинг API...")
+        events = await self.fetch_listings(session)
+
+        # 3. Сохраняем свежесобранные данные в кеш
+        if events:
+            try:
+                with open(cache_file, "w", encoding="utf-8") as f:
+                    # Независимо от того, датакласс это или обычный класс, собираем словари
+                    data_to_save = [{
+                        "symbol": e.symbol,
+                        "phemex_symbol": e.phemex_symbol,
+                        "announce_ts_ms": e.announce_ts_ms,
+                        "announce_ts_str": e.announce_ts_str,
+                        "title": e.title
+                    } for e in events]
+                    
+                    json.dump(data_to_save, f, ensure_ascii=False, indent=4)
+                logger.info(f"Upbit: {len(events)} анонсов успешно сохранены в кеш '{cache_file}'")
+            except Exception as e:
+                logger.error(f"Ошибка сохранения кеша: {e}")
+
         return events

@@ -76,3 +76,23 @@
 2026-04-20 02:04:19  api.phemex            ERROR     klines FLUIDUSDT HTTP 400: {"code":30001,"msg":"Please try again later","data":null}
 2026-04-20 02:04:19  api.phemex            ERROR     klines INUSDT HTTP 400: {"code":30001,"msg":"Please try again later","data":null}
 2026-04-20 02:04:20  api.phemex            ERROR     klines XPLUSDT HTTP 400: {"code":30001,"msg":"Please try again later","data":null}
+2026-04-20 02:11:21  api.phemex            INFO      Phemex: загружено 519 USDT perpetuals
+2026-04-20 02:11:29  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [MOVEUSDT]
+2026-04-20 02:11:29  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [MEUSDT]
+2026-04-20 02:11:30  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [MOCAUSDT]
+2026-04-20 02:11:30  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [VANAUSDT]
+2026-04-20 02:11:31  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [SONICUSDT]
+2026-04-20 02:11:31  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [ANIMEUSDT]
+2026-04-20 02:11:32  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [VIRTUALUSDT]
+2026-04-20 02:11:32  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [JTOUSDT]
+2026-04-20 02:11:32  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [BERAUSDT]
+2026-04-20 02:11:33  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [LAYERUSDT]
+2026-04-20 02:11:33  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [TRUMPUSDT]
+2026-04-20 02:11:33  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [JTOUSDT]
+2026-04-20 02:11:34  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [ARKMUSDT]
+2026-04-20 02:11:34  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [COWUSDT]
+2026-04-20 02:11:35  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [KAITOUSDT]
+2026-04-20 02:11:35  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [ARKMUSDT]
+2026-04-20 02:11:36  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [ORCAUSDT]
+2026-04-20 02:11:36  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [WALUSDT]
+2026-04-20 02:11:36  api.phemex            ERROR     Failed klines HTTP 400: {"code":30001,"msg":"Please try again later","data":null} [COMPUSDT]

@@ -1,14 +1,13 @@
 """
-api/upbit.py — Парсер анонсов листингов Upbit.
+API/upbit.py
 
-URL:    https://upbit.com/api/v1/notices
-Params: category="trade", os="web"  — обязательны
-Key:    data["data"]["notices"]
-Time:   notice["listed_at"]
+Рабочий эндпоинт: https://api-manager.upbit.com/api/v1/announcements
+  ↑ это /announcements, НЕ /notices — именно здесь была корневая ошибка.
 
-ВАЖНО: без заголовков Accept+X-Requested-With сервер возвращает
-HTML-оболочку SPA (статус 200, mime text/html) вместо JSON.
-content_type=None в resp.json() обходит проверку mime.
+Логика запроса 1:1 из fetch_upbit_announcements (DEFAULT_CONFIG):
+  params:  category="trade", os="web"
+  key:     data["data"]["notices"]
+  ts:      notice["listed_at"]
 """
 from __future__ import annotations
 
@@ -22,24 +21,9 @@ import aiohttp
 from _math import ListingEvent
 from c_log import get_logger
 from config import UpbitConfig
-from const import SYMBOL_BLACKLIST
 
 logger = get_logger("api.upbit")
 
-# Заголовки, при которых Upbit отдаёт JSON, а не HTML
-_HEADERS: dict[str, str] = {
-    "Accept": "application/json, text/plain, */*",
-    "X-Requested-With": "XMLHttpRequest",
-    "Referer": "https://upbit.com/",
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-}
-
-
-# ── Helpers ──────────────────────────────────────────────────────────────────
 
 def _parse_iso_to_ms(dt_str: str) -> int:
     if not dt_str:
@@ -51,7 +35,7 @@ def _parse_iso_to_ms(dt_str: str) -> int:
         try:
             clean = dt_str[:19]
             dt = datetime.strptime(clean, "%Y-%m-%dT%H:%M:%S")
-            return int((dt.timestamp() - 9 * 3600) * 1000)  # KST → UTC
+            return int((dt.timestamp() - 9 * 3600) * 1000)
         except Exception:
             return 0
 
@@ -63,30 +47,23 @@ def _format_time_utc(ts_ms: int) -> str:
 
 
 def _extract_symbol(title: str) -> Optional[str]:
-    """Извлекает тикер из заголовка вида '카이토(KAITO) 신규 거래지원 안내'."""
     match = re.search(r"\(([^)]+)\)", title)
     if match:
         symbol = match.group(1).strip().upper()
         symbol = re.sub(r"\(.*\)", "", symbol).strip()
-        if symbol and symbol not in SYMBOL_BLACKLIST and 1 <= len(symbol) <= 12:
+        if symbol:
             return symbol
-
-    # Fallback: слово после "for"
     if "for" in title.lower():
         idx = title.lower().find("for")
         tail = title[idx + 3:].strip()
-        candidate = tail.split()[0].upper() if tail else ""
-        if candidate and candidate not in SYMBOL_BLACKLIST and 1 <= len(candidate) <= 12:
-            return candidate
-
+        if tail:
+            return tail.split()[0].upper()
     return None
 
 
 def _to_phemex(sym: str) -> str:
     return f"{sym.upper()}USDT"
 
-
-# ── Parser ───────────────────────────────────────────────────────────────────
 
 class UpbitParser:
     def __init__(self, cfg: UpbitConfig) -> None:
@@ -107,23 +84,12 @@ class UpbitParser:
             }
             try:
                 async with session.get(
-                    self._cfg.notice_url,
-                    params=params,
-                    headers=_HEADERS,
+                    self._cfg.notice_url, params=params
                 ) as resp:
                     if resp.status != 200:
                         logger.error(f"Upbit API error {resp.status} on page {page}")
                         break
-                    # content_type=None — обходим проверку mime-type
-                    data = await resp.json(content_type=None)
-
-                # Если всё равно пришёл HTML — data будет строкой, не dict
-                if not isinstance(data, dict):
-                    logger.error(
-                        f"Upbit page={page}: ожидали dict, получили {type(data).__name__}. "
-                        "Возможно, сервер всё равно вернул HTML."
-                    )
-                    break
+                    data = await resp.json()
 
                 notices: list[dict] = data.get("data", {}).get("notices", [])
                 if not notices:
@@ -132,7 +98,6 @@ class UpbitParser:
 
                 for notice in notices:
                     title: str = notice.get("title", "")
-
                     if not any(kw in title for kw in self._cfg.listing_keywords):
                         continue
 
@@ -173,7 +138,6 @@ class UpbitParser:
 
         logger.info(f"Total listing announcements collected: {len(listings)}")
 
-        # Дедупликация + конвертация в ListingEvent
         seen: set[tuple[str, int]] = set()
         events: list[ListingEvent] = []
         for item in listings:

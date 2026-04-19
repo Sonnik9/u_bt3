@@ -1,26 +1,25 @@
-"""
-config.py — Конфиги приложения.
-Все дефолты здесь, переопределяются в main.py → build_config().
-"""
 from __future__ import annotations
 from dataclasses import dataclass, field
-
-from const import UPBIT_LISTING_KEYWORDS
 
 
 @dataclass
 class UpbitConfig:
-    notice_url: str = "https://upbit.com/api/v1/notices"
-    per_page: int = 100
-    max_pages: int = 20
-    request_delay_sec: float = 0.4
-    listing_keywords: list[str] = field(default_factory=lambda: UPBIT_LISTING_KEYWORDS)
+    # /announcements — НЕ /notices. Это и была корневая ошибка.
+    notice_url: str = "https://api-manager.upbit.com/api/v1/announcements"
+    per_page: int = 20          # столько же сколько в рабочем DEFAULT_CONFIG
+    max_pages: int = 50         # столько же
+    request_delay_sec: float = 0.2
+    listing_keywords: list[str] = field(default_factory=lambda: [
+        "Market Support for",   # EN-заголовки
+        "신규 거래지원",          # KR: новая поддержка торговли
+        "디지털 자산 추가",        # KR: добавление цифрового актива
+    ])
 
 
 @dataclass
 class PhemexConfig:
     base_url: str = "https://api.phemex.com"
-    kline_interval_sec: float = 0.15   # rate-limit guard
+    kline_interval_sec: float = 0.15
     rsi_timeframe: str = "5m"
     rsi_window: int = 14
     klines_limit: int = 100
@@ -28,8 +27,8 @@ class PhemexConfig:
 
 @dataclass
 class BacktestConfig:
-    delta_minutes: int = 15       # T+N минут для замера Δ цены (1–60)
-    min_delta_pct: float = 3.0    # минимальный |Δ%| для попадания в результат
+    delta_minutes: int = 15
+    min_delta_pct: float = 3.0
     trend_enabled: bool = True
     trend_fast_ema: int = 10
     trend_slow_ema: int = 30

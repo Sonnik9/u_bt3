@@ -1,0 +1,32 @@
+2026-04-20 01:09:12  api.upbit             ERROR     Upbit API HTTP 404 page=1  body={"status":404,"error":"Not Found"}
+2026-04-20 01:09:12  api.upbit             INFO      Page 1: нет листинговых нотисов — останавливаем пагинацию
+2026-04-20 01:09:12  api.upbit             INFO      Upbit parser: 0 уникальных листинг-событий
+2026-04-20 01:16:58  api.upbit             ERROR     Error fetching page 1: 200, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://www.upbit.com/api/v1/notices?category=trade&page=1&per_page=100&os=web'
+Traceback (most recent call last):
+  File "c:\Users\User\Downloads\files\API\upbit.py", line 117, in fetch_listings
+    data = await resp.json()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\aiohttp\client_reqrep.py", line 749, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 200, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://www.upbit.com/api/v1/notices?category=trade&page=1&per_page=100&os=web'
+2026-04-20 01:16:58  api.upbit             INFO      Total listing announcements collected: 0
+2026-04-20 01:16:58  api.upbit             INFO      Upbit parser: 0 уникальных листинг-событий
+2026-04-20 01:20:14  api.upbit             ERROR     Error fetching page 1: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "c:\Users\User\Downloads\files\API\upbit.py", line 118, in fetch_listings
+    data = await resp.json(content_type=None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\site-packages\aiohttp\client_reqrep.py", line 766, in json
+    return loads(stripped.decode(encoding))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-04-20 01:20:14  api.upbit             INFO      Total listing announcements collected: 0
+2026-04-20 01:20:14  api.upbit             INFO      Upbit parser: 0 уникальных листинг-событий
